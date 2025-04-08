@@ -148,3 +148,5 @@ dmypy.json
 
 # user
 notes/
+templates/
+utils/
