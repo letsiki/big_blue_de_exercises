@@ -130,7 +130,7 @@ dmypy.json
 
 
 # documents
-*.pdf
+# *.pdf  # used in certain cases for exercises descriptions.
 *.doc
 *.docx
 
@@ -147,6 +147,4 @@ dmypy.json
 *.thumbs.db
 
 # user
-notes/
-templates/
-utils/
+
