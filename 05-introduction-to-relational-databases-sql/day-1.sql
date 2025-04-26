@@ -30,7 +30,7 @@ FROM dataset;
 -- 4
 SELECT title
 FROM dataset
-WHERE lang = 'el' OR lang = 'hi' OR lang = 'it';
+WHERE lang IN ('el', 'it', 'hi');
 
 -- 5
 SELECT title
@@ -45,7 +45,7 @@ WHERE rating_count > 20;
 -- 7
 SELECT imprint, count(title)
 FROM dataset 
-WHERE (publication_date BETWEEN '2010' AND '2020') AND (imprint IS NOT NULL)
+WHERE (publication_date BETWEEN '2010' AND '2021') AND (imprint IS NOT NULL)
 GROUP BY imprint
 ORDER BY count(title) DESC
 LIMIT 1;
