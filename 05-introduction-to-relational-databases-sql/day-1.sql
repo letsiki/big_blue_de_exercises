@@ -28,16 +28,21 @@ SELECT DISTINCT lang
 FROM dataset;
 
 -- 4
+SELECT title 
+FROM dataset
+WHERE title LIKE '%history%'
+
+-- 5
 SELECT title
 FROM dataset
 WHERE lang IN ('el', 'it', 'hi');
 
--- 5
+-- 6a
 SELECT title
 FROM dataset 
 WHERE rating_avg = 5;
 
--- 6
+-- 6b
 SELECT title
 FROM dataset
 WHERE rating_count > 20;
