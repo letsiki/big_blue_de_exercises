@@ -1,5 +1,4 @@
 --Dataset: NBA games
-
 --1.a Find all allstar MVP players.
 SELECT DISTINCT p.full_name
 FROM allstar_mvps m
