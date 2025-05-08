@@ -98,11 +98,10 @@ ORDER BY
 LIMIT 5;
 
 -- 4b.
-SELECT count(employee_id) AS employee_count,(
-	SELECT job_title
-FROM jobs
-WHERE job_id = employees.job_id
-)
+SELECT (SELECT job_title
+		FROM jobs j
+		WHERE j.job_id = employees.job_id
+), count(employee_id) AS employee_count
 FROM employees
 GROUP BY
 	job_id
