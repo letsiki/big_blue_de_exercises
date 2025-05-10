@@ -8,7 +8,7 @@ SELECT concat(substring(day_of_week FROM 1 FOR 1), lower(substring(day_of_week F
 
 --5a. It takes half an hour to register an order in the system. Calculate the time the orders were truly placed, 
 --30 minutes earlier.
-SELECT *, occurred_at + INTERVAL '30 minutes' AS time_registered FROM orders o;
+SELECT *, occurred_at - INTERVAL '30 minutes' AS time_placed FROM orders o;
 
 --5b. Also, expected delivery is in 4 days at most. Create a column for latest delivery date (no time info needed)
 SELECT *, REGEXP_REPLACE(date_trunc('day', occurred_at + INTERVAL '4 days')::varchar, 
@@ -27,7 +27,7 @@ JOIN accounts ON accounts.id = orders.account_id;
 SELECT * FROM orders_plus_other_aa
 
 --6a. How much standard and other quantity and amount were sold per year
-SELECT date_part('year', occurred_at) AS year, 
+SELECT date_part('year', occurred_at)::varchar AS year, 
 	   sum(standard_qty) AS total_standard_qty, 
 	   sum(standard_amt_usd) AS total_amt_usd, 
 	   sum(other_qty) AS total_other_qty, 
@@ -37,15 +37,16 @@ GROUP BY date_part('year', occurred_at)
 ORDER BY YEAR;
 
 --6b. How much standard and other quantity and amount were sold during 2015 and 2016 to Walmart and Apple?
-SELECT date_part('year', occurred_at) AS year, 
+SELECT name,
+	   -- date_part('year', occurred_at)::varchar AS year, 
 	   sum(standard_qty) AS total_standard_qty, 
 	   sum(standard_amt_usd) AS total_amt_usd, 
 	   sum(other_qty) AS total_other_qty, 
 	   sum(other_amt_usd) AS total_other_amt
 FROM orders_plus_other_aa
 WHERE date_part('year', occurred_at) BETWEEN 2015 AND 2016 AND name IN ('Apple', 'Walmart')
-GROUP BY date_part('year', occurred_at)
-ORDER BY YEAR;
+GROUP BY name --date_part('year', occurred_at), name
+ORDER BY name;
 
 --7a. Which month has the highest sales of paper in total quantity? Can you possibly give an explanation?
 WITH total_paper_sold AS (
@@ -56,6 +57,8 @@ GROUP BY date_part('month', occurred_at)
 SELECT * 
 FROM total_paper_sold
 WHERE total_paper_qty = (SELECT max(total_paper_qty) FROM total_paper_sold);
+-- It's Christmas
+
 
 --7b. Which client ordered the biggest quantity of paper during December 2016?
 WITH total_paper_sold AS (
@@ -68,7 +71,7 @@ SELECT *
 FROM total_paper_sold
 WHERE total_paper_qty = (SELECT max(total_paper_qty) FROM total_paper_sold);
 
---7c. How many orders are made per week on average, how much paper is sold on average
+-- 7c. How many orders are made per week on average, how much paper is sold on average
 --SELECT date_part('week', occurred_at) AS wk, count(id) AS orders_nr, avg(total) AS avg_amt_per_order
 --FROM orders_plus_other_aa
 --GROUP BY date_part('week', occurred_at)
@@ -83,7 +86,20 @@ GROUP BY date_part('week', occurred_at)
 )
 SELECT round(avg(orders_count)) AS weekly_orders,
        round(avg(total_paper)) AS weekly_paper
-       FROM weekly_orders
+       FROM weekly_orders;
+	   
+
+
+SELECT round(avg(orders_count)) AS weekly_orders,
+       round(avg(total_paper)) AS weekly_paper
+       FROM (
+			SELECT date_part('week', occurred_at) AS "week",
+		   		   count(id) AS orders_count,
+		           sum(total) AS total_paper
+			FROM orders_plus_other_aa
+			GROUP BY date_part('week', occurred_at)
+	   ) sub;
+
 
 --8a. How many orders are made per day of the week?
 SELECT date_part('dow', occurred_at) AS weekday, count(id) AS orders_nr
@@ -94,7 +110,7 @@ ORDER BY weekday;
 --8b. Which client company has made the most orders during weekends?
 SELECT name, count(id) order_nr
 FROM orders_plus_other_aa
-WHERE date_part('dow', occurred_at) IN (5, 6)
+WHERE date_part('dow', occurred_at) IN (0, 6)
 GROUP BY name
 ORDER BY order_nr DESC
 LIMIT 1;
@@ -114,7 +130,7 @@ SELECT name,
 	   occurred_at::date AS order_date,
 	   count(id) over(PARTITION BY name) as client_total_count
 FROM orders_plus_other_aa
-WHERE date_part('dow', occurred_at) = 0
+WHERE date_part('dow', occurred_at) = 1
 ORDER BY client_total_count DESC, name, order_date
 
 
@@ -165,13 +181,13 @@ WHERE date_part('year', occurred_at) = 2016 AND name IN ('Coca-Cola', 'Walmart')
 GROUP BY name, date_part('month', occurred_at)
 )
 SELECT *,
-	   monthly_sales - (coalesce(LAG(monthly_sales, 1) OVER(PARTITION BY name ORDER BY month), 0)) AS monthly_diff 
+	   monthly_sales - (LAG(monthly_sales, 1) OVER(PARTITION BY name ORDER BY month)) AS monthly_diff 
 FROM coca_walmart
 ORDER BY name, MONTH;
 
 
 SELECT *,
-	   monthly_sales - (coalesce(LAG(monthly_sales, 1) OVER(PARTITION BY name ORDER BY month), 0)) AS monthly_diff 
+	   monthly_sales - (LAG(monthly_sales, 1) OVER(PARTITION BY name ORDER BY month)) AS monthly_diff 
 FROM (
 	SELECT name, 
 		   date_part('month', occurred_at) AS "month",
