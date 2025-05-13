@@ -1,0 +1,272 @@
+Abyssinian, 200, OK, data list size: 1
+Aegean, 200, OK, data list size: 1
+American Curl, 200, OK, data list size: 1
+American Bobtail, 200, OK, data list size: 1
+American Shorthair, 200, OK, data list size: 1
+American Wirehair, 200, OK, data list size: 1
+Arabian Mau, 200, OK, data list size: 1
+Australian Mist, 200, OK, data list size: 1
+Asian, 200, OK, data list size: 1
+Asian Semi-longhair, 200, OK, data list size: 0
+Balinese, 200, OK, data list size: 1
+Bambino, 200, OK, data list size: 1
+Bengal, 200, OK, data list size: 1
+Birman, 200, OK, data list size: 1
+Bombay, 200, OK, data list size: 1
+Brazilian Shorthair, 200, OK, data list size: 1
+British Semi-longhair, 200, OK, data list size: 0
+British Shorthair, 200, OK, data list size: 1
+British Longhair, 200, OK, data list size: 1
+Burmese, 200, OK, data list size: 2
+Burmilla, 200, OK, data list size: 1
+California Spangled, 200, OK, data list size: 1
+Chantilly-Tiffany, 200, OK, data list size: 1
+Chartreux, 200, OK, data list size: 1
+Chausie, 200, OK, data list size: 1
+Cheetoh, 200, OK, data list size: 0
+Colorpoint Shorthair, 200, OK, data list size: 1
+Cornish Rex, 200, OK, data list size: 1
+Cymric or Manx Longhair, 200, OK, data list size: 0
+Cyprus, 200, OK, data list size: 1
+Devon Rex, 200, OK, data list size: 1
+Donskoy, or Don Sphynx, 200, OK, data list size: 0
+Dragon Li, 200, OK, data list size: 0
+Dwarf cat, or Dwelf, 200, OK, data list size: 0
+Egyptian Mau, 200, OK, data list size: 1
+European Shorthair, 200, OK, data list size: 1
+Exotic Shorthair, 200, OK, data list size: 0
+Foldex[4], 200, OK, data list size: 0
+German Rex, 200, OK, data list size: 1
+Havana Brown, 200, OK, data list size: 1
+Highlander, 200, OK, data list size: 1
+Himalayan, or Colorpoint Persian, 200, OK, data list size: 0
+Japanese Bobtail, 200, OK, data list size: 1
+Javanese, 200, OK, data list size: 1
+Karelian Bobtail, 200, OK, data list size: 0
+Khao Manee, 200, OK, data list size: 1
+Korat, 200, OK, data list size: 1
+Korean Bobtail, 200, OK, data list size: 0
+Korn Ja, 200, OK, data list size: 0
+Kurilian Bobtail, or Kuril Islands Bobtail, 200, OK, data list size: 0
+LaPerm, 200, OK, data list size: 1
+Lykoi, 200, OK, data list size: 1
+Maine Coon, 200, OK, data list size: 1
+Manx, 200, OK, data list size: 1
+Mekong Bobtail, 200, OK, data list size: 1
+Minskin, 200, OK, data list size: 0
+Munchkin, 200, OK, data list size: 0
+Nebelung, 200, OK, data list size: 1
+Napoleon, 200, OK, data list size: 1
+Norwegian Forest cat, 200, OK, data list size: 0
+Ocicat, 200, OK, data list size: 1
+Ojos Azules, 200, OK, data list size: 0
+Oregon Rex, 200, OK, data list size: 0
+Oriental Bicolor, 200, OK, data list size: 1
+Oriental Shorthair, 200, OK, data list size: 0
+Oriental Longhair, 200, OK, data list size: 0
+PerFoldæ(Experimental Breed - WCF), 200, OK, data list size: 0
+Persian (Modern Persian Cat), 200, OK, data list size: 0
+Persian (Traditional Persian Cat), 200, OK, data list size: 0
+Peterbald, 200, OK, data list size: 1
+Pixie-bob, 200, OK, data list size: 1
+Raas, 200, OK, data list size: 0
+Ragamuffin, 200, OK, data list size: 1
+Ragdoll, 200, OK, data list size: 1
+Russian Blue, 200, OK, data list size: 1
+Russian White, Black and Tabby, 200, OK, data list size: 0
+Sam Sawet, 200, OK, data list size: 0
+Savannah, 200, OK, data list size: 1
+Scottish Fold, 200, OK, data list size: 1
+Selkirk Rex, 200, OK, data list size: 1
+Serengeti, 200, OK, data list size: 1
+Serrade petit, 200, OK, data list size: 0
+Siamese, 200, OK, data list size: 1
+Siberian, 200, OK, data list size: 1
+Singapura, 200, OK, data list size: 1
+Snowshoe, 200, OK, data list size: 1
+Sokoke, 200, OK, data list size: 1
+Somali, 200, OK, data list size: 1
+Sphynx, 200, OK, data list size: 1
+Suphalak, 200, OK, data list size: 0
+Thai, 200, OK, data list size: 7
+Thai Lilac, 200, OK, data list size: 1
+Tonkinese, 200, OK, data list size: 1
+Toyger, 200, OK, data list size: 1
+Turkish Angora, 200, OK, data list size: 1
+Turkish Van, 200, OK, data list size: 1
+Ukrainian Levkoy, 200, OK, data list size: 1
+York Chocolate, 200, OK, data list size: 1
+fetching page 1, response code: 200, OK
+fetching page 2, response code: 200, OK
+fetching page 3, response code: 200, OK
+fetching page 4, response code: 200, OK
+fetching page 5, response code: 200, OK
+fetching page 6, response code: 200, OK
+fetching page 7, response code: 200, OK
+fetching page 8, response code: 200, OK
+fetching page 9, response code: 200, OK
+fetching page 10, response code: 200, OK
+fetching page 11, response code: 200, OK
+fetching page 12, response code: 200, OK
+fetching page 13, response code: 200, OK
+fetching page 14, response code: 200, OK
+fetching page 15, response code: 200, OK
+fetching page 16, response code: 200, OK
+fetching page 17, response code: 200, OK
+fetching page 18, response code: 200, OK
+fetching page 19, response code: 200, OK
+fetching page 20, response code: 200, OK
+fetching page 21, response code: 200, OK
+fetching page 22, response code: 200, OK
+fetching page 23, response code: 200, OK
+fetching page 24, response code: 200, OK
+fetching page 25, response code: 200, OK
+fetching page 26, response code: 200, OK
+fetching page 27, response code: 200, OK
+fetching page 28, response code: 200, OK
+fetching page 29, response code: 200, OK
+fetching page 30, response code: 200, OK
+fetching page 31, response code: 200, OK
+fetching page 32, response code: 200, OK
+fetching page 33, response code: 200, OK
+fetching page 34, response code: 200, OK
+fetching page 35, response code: 200, OK
+fetching page 36, response code: 200, OK
+fetching page 37, response code: 200, OK
+fetching page 38, response code: 200, OK
+fetching page 39, response code: 200, OK
+fetching page 40, response code: 200, OK
+fetching page 41, response code: 200, OK
+fetching page 42, response code: 200, OK
+fetching page 43, response code: 200, OK
+fetching page 44, response code: 200, OK
+fetching page 45, response code: 200, OK
+fetching page 46, response code: 200, OK
+fetching page 47, response code: 200, OK
+fetching page 48, response code: 200, OK
+fetching page 49, response code: 200, OK
+fetching page 50, response code: 200, OK
+fetching page 51, response code: 200, OK
+fetching page 52, response code: 200, OK
+fetching page 53, response code: 200, OK
+fetching page 54, response code: 200, OK
+fetching page 55, response code: 200, OK
+fetching page 56, response code: 200, OK
+fetching page 57, response code: 200, OK
+fetching page 58, response code: 200, OK
+fetching page 59, response code: 200, OK
+fetching page 60, response code: 200, OK
+fetching page 61, response code: 200, OK
+fetching page 62, response code: 200, OK
+fetching page 63, response code: 200, OK
+fetching page 64, response code: 200, OK
+fetching page 65, response code: 200, OK
+fetching page 66, response code: 200, OK
+fetching page 67, response code: 200, OK
+fetching page 68, response code: 200, OK
+fetching page 69, response code: 200, OK
+fetching page 70, response code: 200, OK
+fetching page 71, response code: 200, OK
+fetching page 72, response code: 200, OK
+fetching page 73, response code: 200, OK
+fetching page 74, response code: 200, OK
+fetching page 75, response code: 200, OK
+fetching page 76, response code: 200, OK
+fetching page 77, response code: 200, OK
+fetching page 78, response code: 200, OK
+fetching page 79, response code: 200, OK
+fetching page 80, response code: 200, OK
+fetching page 81, response code: 200, OK
+fetching page 82, response code: 200, OK
+fetching page 83, response code: 200, OK
+fetching page 84, response code: 200, OK
+fetching page 85, response code: 200, OK
+fetching page 86, response code: 200, OK
+fetching page 87, response code: 200, OK
+fetching page 88, response code: 200, OK
+fetching page 89, response code: 200, OK
+fetching page 90, response code: 200, OK
+fetching page 91, response code: 200, OK
+fetching page 92, response code: 200, OK
+fetching page 93, response code: 200, OK
+fetching page 94, response code: 200, OK
+fetching page 95, response code: 200, OK
+fetching page 96, response code: 200, OK
+fetching page 97, response code: 200, OK
+fetching page 98, response code: 200, OK
+fetching page 99, response code: 200, OK
+fetching page 100, response code: 200, OK
+fetching page 101, response code: 200, OK
+fetching page 102, response code: 200, OK
+fetching page 103, response code: 200, OK
+fetching page 104, response code: 200, OK
+fetching page 105, response code: 200, OK
+fetching page 106, response code: 200, OK
+fetching page 107, response code: 200, OK
+fetching page 108, response code: 200, OK
+fetching page 109, response code: 200, OK
+fetching page 110, response code: 200, OK
+fetching page 111, response code: 200, OK
+fetching page 112, response code: 200, OK
+fetching page 113, response code: 200, OK
+fetching page 114, response code: 200, OK
+fetching page 115, response code: 200, OK
+fetching page 116, response code: 200, OK
+fetching page 117, response code: 200, OK
+fetching page 118, response code: 200, OK
+fetching page 119, response code: 200, OK
+fetching page 120, response code: 200, OK
+fetching page 121, response code: 200, OK
+fetching page 122, response code: 200, OK
+fetching page 123, response code: 200, OK
+fetching page 124, response code: 200, OK
+fetching page 125, response code: 200, OK
+fetching page 126, response code: 200, OK
+fetching page 127, response code: 200, OK
+fetching page 128, response code: 200, OK
+fetching page 129, response code: 200, OK
+fetching page 130, response code: 200, OK
+fetching page 131, response code: 200, OK
+fetching page 132, response code: 200, OK
+fetching page 133, response code: 200, OK
+fetching page 134, response code: 200, OK
+fetching page 135, response code: 200, OK
+fetching page 136, response code: 200, OK
+fetching page 137, response code: 200, OK
+fetching page 138, response code: 200, OK
+fetching page 139, response code: 200, OK
+fetching page 140, response code: 200, OK
+fetching page 141, response code: 200, OK
+fetching page 142, response code: 200, OK
+fetching page 143, response code: 200, OK
+fetching page 144, response code: 200, OK
+fetching page 145, response code: 200, OK
+fetching page 146, response code: 200, OK
+fetching page 147, response code: 200, OK
+fetching page 148, response code: 200, OK
+fetching page 149, response code: 200, OK
+fetching page 150, response code: 200, OK
+fetching page 151, response code: 200, OK
+fetching page 152, response code: 200, OK
+fetching page 153, response code: 200, OK
+fetching page 154, response code: 200, OK
+fetching page 155, response code: 200, OK
+fetching page 156, response code: 200, OK
+fetching page 157, response code: 200, OK
+fetching page 158, response code: 200, OK
+fetching page 159, response code: 200, OK
+fetching page 160, response code: 200, OK
+fetching page 161, response code: 200, OK
+fetching page 162, response code: 200, OK
+fetching page 163, response code: 200, OK
+fetching page 164, response code: 200, OK
+fetching page 165, response code: 200, OK
+fetching page 166, response code: 200, OK
+fetching page 167, response code: 200, OK
+fetching page 168, response code: 200, OK
+fetching page 169, response code: 200, OK
+fetching page 170, response code: 200, OK
+fetching page 171, response code: 200, OK
+fetching page 172, response code: 200, OK
+fetching page 173, response code: 200, OK
+fetching page 174, response code: 200, OK
