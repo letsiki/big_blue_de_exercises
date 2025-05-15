@@ -76,30 +76,17 @@ WHERE total_paper_qty = (SELECT max(total_paper_qty) FROM total_paper_sold);
 --FROM orders_plus_other_aa
 --GROUP BY date_part('week', occurred_at)
 --ORDER BY wk;
-
+   
 WITH weekly_orders AS (
-	SELECT date_part('week', occurred_at) AS "week",
+	SELECT date_part('week', occurred_at) AS "week", date_part('year', occurred_at) AS "year",
 		   count(id) AS orders_count,
 		   sum(total) AS total_paper
 FROM orders_plus_other_aa
-GROUP BY date_part('week', occurred_at)
+GROUP BY date_part('week', occurred_at), date_part('year', occurred_at)
 )
 SELECT round(avg(orders_count)) AS weekly_orders,
        round(avg(total_paper)) AS weekly_paper
        FROM weekly_orders;
-	   
-
-
-SELECT round(avg(orders_count)) AS weekly_orders,
-       round(avg(total_paper)) AS weekly_paper
-       FROM (
-			SELECT date_part('week', occurred_at) AS "week",
-		   		   count(id) AS orders_count,
-		           sum(total) AS total_paper
-			FROM orders_plus_other_aa
-			GROUP BY date_part('week', occurred_at)
-	   ) sub;
-
 
 --8a. How many orders are made per day of the week?
 SELECT date_part('dow', occurred_at) AS weekday, count(id) AS orders_nr
