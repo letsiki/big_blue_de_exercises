@@ -1,4 +1,5 @@
 processing request 1 out of 2328
+processing request 1 out of 2328
 processing request 2 out of 2328
 processing request 3 out of 2328
 processing request 4 out of 2328
@@ -3891,6 +3892,11 @@ processing response 1561 out of 2328
 processing response 1562 out of 2328
 processing response 1563 out of 2328
 processing response 1564 out of 2328
+week 1976.03.01 error
+ranks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+player_names: []
+countries: [] 
+ points_all: []
 processing response 1565 out of 2328
 processing response 1566 out of 2328
 processing response 1567 out of 2328
@@ -3978,6 +3984,11 @@ processing response 1648 out of 2328
 processing response 1649 out of 2328
 processing response 1650 out of 2328
 processing response 1651 out of 2328
+week 1985.03.03 error
+ranks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+player_names: []
+countries: [] 
+ points_all: []
 processing response 1652 out of 2328
 processing response 1653 out of 2328
 processing response 1654 out of 2328
@@ -4512,6 +4523,11 @@ processing response 2182 out of 2328
 processing response 2183 out of 2328
 processing response 2184 out of 2328
 processing response 2185 out of 2328
+week 1978.01.02 error
+ranks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+player_names: []
+countries: [] 
+ points_all: []
 processing response 2186 out of 2328
 processing response 2187 out of 2328
 processing response 2188 out of 2328
