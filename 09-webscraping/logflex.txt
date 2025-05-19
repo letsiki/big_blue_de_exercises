@@ -1,3 +1,4 @@
+processing category PRO
 page number: 1
 processing https://flexcar.gr/cars/citroen/citroen-ami-electric-cargo/?lang=en
 processing https://flexcar.gr/cars/peugeot/peugeot-partner-diesel-l1-h1-6/?lang=en
@@ -28,6 +29,7 @@ processing https://flexcar.gr/cars/fiat/fiat-e-scudo-l2-pack-tecnico/?lang=en
 processing https://flexcar.gr/cars/renault/renault-express-van-d-full/?lang=en
 processing https://flexcar.gr/cars/citroen/citroen-jumpy-diesel-m-l2-h1/?lang=en
 processing https://flexcar.gr/cars/mercedes/mercedes-citan-van-108-4x2/?lang=en
+processing category SCO
 page number: 1
 processing https://flexcar.gr/cars/piaggio/piaggio-beverly-300-rwd-35/?lang=en
 processing https://flexcar.gr/cars/piaggio/piaggio-beverly-petrol-400-5/?lang=en
@@ -49,6 +51,7 @@ processing https://flexcar.gr/cars/seat/seat-mo-electric-e-scooter/?lang=en
 processing https://flexcar.gr/cars/honda/honda-sh-150-sporty-plus-top-box/?lang=en
 processing https://flexcar.gr/cars/honda/honda-sh-125-plus-top-box/?lang=en
 processing https://flexcar.gr/cars/piaggio/piaggio-beverly-petrol-300s-1/?lang=en
+processing category MIN
 page number: 1
 processing https://flexcar.gr/cars/smart/smart-for-two-electric-pulse/?lang=en
 processing https://flexcar.gr/cars/zhidou/zhidou-d2-electric-basic-1/?lang=en
@@ -67,6 +70,7 @@ processing https://flexcar.gr/cars/vw/vw-up-cng-eco-1/?lang=en
 processing https://flexcar.gr/cars/renault/renault-twingo-equlibre-plus/?lang=en
 processing https://flexcar.gr/cars/mini/mini-3-doors-electric-cooper-se/?lang=en
 processing https://flexcar.gr/cars/zhidou/zhi-dou-d1/?lang=en
+processing category HAT
 page number: 1
 processing https://flexcar.gr/cars/opel/opel-astra-gs-line-phev/?lang=en
 processing https://flexcar.gr/cars/vw/vw-polo-life/?lang=en
@@ -121,12 +125,14 @@ processing https://flexcar.gr/cars/seat/seat-leon-petrol-fr/?lang=en
 processing https://flexcar.gr/cars/fiat/fiat-500-hybrid-petrol-cult/?lang=en
 processing https://flexcar.gr/cars/dacia/dacia-sandero-lpg-streetway-life/?lang=en
 processing https://flexcar.gr/cars/audi/audi-a1-advanced-30-tfsi/?lang=en
+processing category SED
 page number: 1
 processing https://flexcar.gr/cars/volvo/volvo-s60-recharge-plug-in-hybrid-petrol-plus-t8/?lang=en
 processing https://flexcar.gr/cars/tesla/tesla-model-3-electric-performance/?lang=en
 processing https://flexcar.gr/cars/tesla/tesla-model-3-electric-long-range-1/?lang=en
 processing https://flexcar.gr/cars/mercedes/mercedes-a-class-mild-hybrid-petrol-180-style-line/?lang=en
 processing https://flexcar.gr/cars/mazda/mazda-3-gt-plus-sedan/?lang=en
+processing category SUV
 page number: 1
 processing https://flexcar.gr/cars/vw/vw-t-roc-life/?lang=en
 processing https://flexcar.gr/cars/renault/renault-arkana-hybrid-petrol-e-tech-techno/?lang=en
@@ -247,11 +253,13 @@ processing https://flexcar.gr/cars/renault/renault-captur-mild-hybrid-petrol-tec
 processing https://flexcar.gr/cars/peugeot/peugeot-3008-diesel-active-plus-8/?lang=en
 processing https://flexcar.gr/cars/vw/vw-tiguan-petrol-life-2/?lang=en
 processing https://flexcar.gr/cars/mercedes/mercedes-eqc-electric-400-advantage-pack/?lang=en
+processing category LUX
 page number: 1
 processing https://flexcar.gr/cars/jaguar/jaguar-f-pace-plug-in-hybrid-petrol-s-p400e-1/?lang=en
 processing https://flexcar.gr/cars/land-rover/range-rover-evoque-plug-in-hybrid-r-dynamic-s/?lang=en
 processing https://flexcar.gr/cars/land-rover/land-rover-defender-mild-hybrid-diesel-x-dynamic-se/?lang=en
 processing https://flexcar.gr/cars/land-rover/range-rover-velar-mild-hybrid-diesel-dynamic-se/?lang=en
+processing category B
 page number: 1
 processing https://flexcar.gr/cars/honda/honda-nc-petrol-750-x-2/?lang=en
 processing https://flexcar.gr/cars/honda/honda-cb-petrol-500-x-1/?lang=en
