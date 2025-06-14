@@ -148,3 +148,12 @@ dmypy.json
 
 # user
 
+14-docker/.sudo_as_admin_successful
+14-docker/.bashrc
+13-remote-servers/# Basic Linux Commands
+13-remote-servers/files/__MACOSX/._files
+13-remote-servers/files/__MACOSX/files/._hello.py
+13-remote-servers/files/__MACOSX/files/._log_output.py
+13-remote-servers/files/__MACOSX/files/._streamlit_app.py
+14-docker/.bash_history
+10-mongodb/mongo-basic-guide.pdf

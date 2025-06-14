@@ -1,0 +1,14 @@
+michalis ALL=(ALL) NOPASSWD:ALL sto etc/sudoers.d/alex-user
+chmod 400 an xreiazetai sto private key
+
+su - alex
+
+copy pblic key from azureuser to home/alex/.ssh/authorised_keys
+
+use generated key with ssh -i key_location azeureuser@...
+
+we can copy our default user public key to alex .ssh/authorised_keys
+and then we can simply ssh ommitting -i <key-location>
+
+streamlit connect streamlit run streamlit_app.py --server.address=0.0.0.0 --server.port=8501
+
