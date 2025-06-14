@@ -1,0 +1,13 @@
+Inside the VM
+Create a a directory ~/scraper
+Create a a directory ~/csv
+
+From the Host
+Copy all files into the newly created scraper directory of the VM
+
+from vm ~
+docker build -t scraper:latest ./scraper
+docker run -d -v ./csv:/app/csv scraper:latest
+
+This should generate a csv file inside the ~/csv folder of the VM every minute.
+To verify it works, wait until a csv file appear in the scv directory, remove it with 'rm', and wait for it to appear again.

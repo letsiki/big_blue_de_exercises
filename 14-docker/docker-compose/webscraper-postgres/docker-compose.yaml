@@ -1,0 +1,34 @@
+version: '3'   
+services:
+  postgresdb:
+    image: postgres
+    container_name: postgres-db
+    ports:
+      - 5432:5432 
+    environment:
+      - POSTGRES_PASSWORD=docker # environment variable required (check the info for postgres image in Dockerhub), username is by default 'postgres'
+    volumes:
+      - pgadmin:/var/lib/postgresql/data # named volume to preserve the data when container stops
+                                         # the path where postgres stores the data inside a container can be found in Dockerhub
+  pgadmin:
+    image: dpage/pgadmin4
+    ports: 
+      - 80:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@domain.com # environment variables required 
+      - PGADMIN_DEFAULT_PASSWORD=SuperSecret  # (check the info for pgadmin image in Dockerhub)
+    depends_on:
+      - postgresdb
+
+  python: 
+    build: .
+    depends_on: 
+      - postgresdb
+    environment:
+      - PASSWORD=docker
+      - PORT=5432
+      - HOST=postgres-db
+    
+
+volumes:
+  pgadmin:
