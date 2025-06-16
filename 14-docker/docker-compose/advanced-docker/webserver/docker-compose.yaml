@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      # TODO: Map HOST_PORT to CONTAINER_PORT using environment variables
+      - ${HOST_PORT}:${CONTAINER_PORT}
+    volumes:
+      # TODO: Bind the host config directory to /app/config in the container
+      - ./config:/app/config 
+    environment:
+      # TODO: Pass CONTAINER_PORT to the app environment variable PORT
+      -  PORT=${CONTAINER_PORT}

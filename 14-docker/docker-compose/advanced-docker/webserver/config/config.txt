@@ -1,0 +1,3 @@
+This is my custom message. You can edit me.
+But..., does bind mount work??
+Yes it does

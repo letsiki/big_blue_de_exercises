@@ -1,0 +1,38 @@
+Docker Compose Exercise: Configurable Web Server
+
+📌 What the App Does
+Starts a lightweight HTTP server using Python.
+
+Reads the contents of config/config.txt at runtime.
+
+When you visit the container in your browser, it displays the content of the file.
+
+Both the internal port (the app’s port) and external port (what you visit in the browser) are fully configurable using environment variables.
+
+📌 Learning Objectives
+By completing this exercise, you will learn how to:
+✅ Use Docker and Docker Compose to run a simple web server.
+✅ Pass configuration values into the container using environment variables.
+✅ Use a bind-mounted file (config.txt) to modify the application’s behavior without rebuilding the image.
+✅ Understand the difference between the host port and container port in Docker networking.
+
+📌 Steps to Complete
+1️⃣ Create a .env file to set the HOST_PORT and CONTAINER_PORT environment variables.
+2️⃣ Edit the Dockerfile following the instructions inside it.3️⃣ Edit the docker-compose.yaml following the instructions inside it.
+
+📌 How to Use It
+🚀 Start the App
+
+`docker compose up --build`
+
+🌍 Visit the App
+Open your browser to: 👉 http://<server_ip>:8080 (or whichever port is set in .env under HOST_PORT).
+
+You should see the message from config/config.txt.
+
+📌 Try Changing the Config File
+Modify the contents of config/config.txt using a text editor:
+
+`nano config/config.txt`
+
+Then refresh your browser to see the updated message!
