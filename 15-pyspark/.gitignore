@@ -1,0 +1,9 @@
+.jupyter/
+.local/
+.npm/
+.vscode/
+spark-warehouse/
+SparkOrNotToSpark.ipynb
+live-coding.ipynb
+parquet/
+.ipython
