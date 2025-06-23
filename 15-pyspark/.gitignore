@@ -7,3 +7,4 @@ SparkOrNotToSpark.ipynb
 live-coding.ipynb
 parquet/
 .ipython
+caching-and-corruption.md
