@@ -43,10 +43,10 @@ with DAG(
         tasks.append(task)
 
 
-        # by creating the dependencies we can clearly see that everything ran in order
-        # without it order was random
-        for i in range(len(tasks) -1):
-            tasks[i] >> tasks[i + 1]
+    # by creating the dependencies we can clearly see that everything ran in order
+    # without it order was random
+    for i in range(len(tasks) -1):
+        tasks[i] >> tasks[i + 1]
 
 # Python Operator
 
@@ -71,10 +71,10 @@ with DAG(
         tasks.append(task)
 
 
-        # by creating the dependencies we can clearly see that everything ran in order
-        # without it order was random
-        for i in range(len(tasks) -1):
-            tasks[i] >> tasks[i + 1]
+    # by creating the dependencies we can clearly see that everything ran in order
+    # without it order was random
+    for i in range(len(tasks) -1):
+        tasks[i] >> tasks[i + 1]
 
     
 
