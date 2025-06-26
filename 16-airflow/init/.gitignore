@@ -1,0 +1,4 @@
+config/*
+docker-compose.yaml
+logs/*
+plugins/*
