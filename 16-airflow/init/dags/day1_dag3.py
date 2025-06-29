@@ -33,26 +33,22 @@ with DAG(
     schedule=None,  # manual only
     catchup=False,
 ) as dag:
-    
+
     tasks = []
     for i in range(1, 8):
-        task = BashOperator(
-        task_id=f"task_{i}",
-        bash_command='echo "This is task {i}"'
-    )
+        task = BashOperator(task_id=f"task_{i}", bash_command='echo "This is task {i}"')
         tasks.append(task)
-
 
     # by creating the dependencies we can clearly see that everything ran in order
     # without it order was random
-    for i in range(len(tasks) -1):
+    for i in range(len(tasks) - 1):
         tasks[i] >> tasks[i + 1]
 
 # Python Operator
 
+
 def python_script(task_nr):
     print(f"This is task {i}")
-
 
 
 with DAG(
@@ -61,20 +57,15 @@ with DAG(
     schedule=None,  # manual only
     catchup=False,
 ) as dag:
-    
+
     tasks = []
     for i in range(1, 8):
         task = PythonOperator(
-        task_id=f"task_{i}",
-        python_callable=python_script, op_args=(i,)  
+            task_id=f"task_{i}", python_callable=python_script, op_args=(i,)
         )
         tasks.append(task)
 
-
     # by creating the dependencies we can clearly see that everything ran in order
     # without it order was random
-    for i in range(len(tasks) -1):
+    for i in range(len(tasks) - 1):
         tasks[i] >> tasks[i + 1]
-
-    
-

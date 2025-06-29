@@ -19,19 +19,13 @@ with DAG(
     schedule=None,  # manual only
     catchup=False,
 ) as dag:
-    
-    task_1 = BashOperator(
-        task_id="task_1",
-        bash_command='echo "This is task 1"'
-    )
+
+    task_1 = BashOperator(task_id="task_1", bash_command='echo "This is task 1"')
 
     task_2 = BashOperator(
         task_id="task_2",
         bash_command='echo "This is task 2"',
-        trigger_rule="all_success"
+        trigger_rule="all_success",
     )
 
     task_1 >> task_2
-
-
-

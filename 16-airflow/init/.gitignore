@@ -2,3 +2,7 @@ config/*
 docker-compose.yaml
 logs/*
 plugins/*
+*.ipynb
+out.*
+printable.py
+*.sql

@@ -7,8 +7,10 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
+
 def python_script():
     print("this is a python script")
+
 
 default_args = {
     "start_date": datetime(2024, 1, 1),
@@ -20,10 +22,7 @@ with DAG(
     schedule=None,  # manual only
     catchup=False,
 ) as dag:
-    
-    task_1 = PythonOperator(
-        task_id="task_1",
-        python_callable=python_script
-    )
+
+    task_1 = PythonOperator(task_id="task_1", python_callable=python_script)
 
     task_1
