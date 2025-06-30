@@ -7,7 +7,7 @@
 
 from datetime import datetime
 from airflow import DAG
-from airflow.operators.bash import BashOperator
+from airflow.providers.standard.operators.bash import BashOperator
 
 default_args = {
     "start_date": datetime(2024, 1, 1),
@@ -18,6 +18,7 @@ with DAG(
     default_args=default_args,
     schedule=None,  # manual only
     catchup=False,
+    tags=['bblue']
 ) as dag:
 
     task_1 = BashOperator(task_id="task_1", bash_command='echo "This is task 1"')

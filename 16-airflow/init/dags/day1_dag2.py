@@ -5,7 +5,7 @@
 
 from datetime import datetime
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.providers.standard.operators.python import PythonOperator
 
 
 def python_script():
@@ -21,8 +21,11 @@ with DAG(
     default_args=default_args,
     schedule=None,  # manual only
     catchup=False,
+    tags=['bblue']
 ) as dag:
 
-    task_1 = PythonOperator(task_id="task_1", python_callable=python_script)
+    task_1 = PythonOperator(
+        task_id="task_1", python_callable=python_script
+    )
 
     task_1

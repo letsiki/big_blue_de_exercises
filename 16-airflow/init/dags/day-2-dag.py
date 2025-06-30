@@ -94,7 +94,7 @@ def generate_random_rows(n: int):
     ]
 
 
-with DAG(dag_id="day_2_dag", start_date=start_date):
+with DAG(dag_id="day_2_dag", start_date=start_date, tags=['bblue']):
 
     notify = DiscordWebhookOperator(
         task_id="notify_discord",

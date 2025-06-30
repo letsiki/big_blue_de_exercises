@@ -6,3 +6,5 @@ plugins/*
 out.*
 printable.py
 *.sql
+*.ipynb
+*.txt
