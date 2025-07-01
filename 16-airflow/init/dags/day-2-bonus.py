@@ -9,13 +9,47 @@ from airflow.providers.discord.operators.discord_webhook import (
     DiscordWebhookOperator,
 )
 from airflow.utils.trigger_rule import TriggerRule
+from airflow.exceptions import AirflowException
+from airflow.providers.discord.hooks import discord_webhook
+
+
+@task.branch
+def branch_choose_message_task(state: bool):
+    return (
+        "generate_success_message"
+        if state
+        else "generate_failure_message"
+    )
+
+
+@task(trigger_rule=TriggerRule.ALL_SUCCESS)
+def generate_success_message():
+    return "✅ Karieragr report ready - check ~/Documents/Bind-Mounts/karieragr/daily-urls/"
+
+
+@task(trigger_rule=TriggerRule.ALL_FAILED)
+def generate_failure_message():
+    return "❌ Karieragr scraping failed."
+
+
+@task(trigger_rule=TriggerRule.ONE_SUCCESS)
+def join(s: str):
+    return s
+
+
+@task(trigger_rule=TriggerRule.ONE_FAILED, retries=0)
+def watcher():
+    raise AirflowException(
+        "Failing task because one or more upstream tasks failed."
+    )
+
 
 with DAG(
     dag_id="karieragr-scraping",
     start_date=datetime(2025, 6, 28),
     schedule="8 9,15 * * *",
     catchup=False,
-    tags=['bblue']
+    tags=["bblue"],
 ) as dag:
 
     scraper = DockerOperator(
@@ -36,26 +70,6 @@ with DAG(
         environment={"POSTGRES_HOST": "my-postgres"},
     )
 
-    @task.branch
-    def branch_choose_message_task(state: bool):
-        return (
-            "generate_success_message"
-            if state
-            else "generate_failure_message"
-        )
-
-    @task(trigger_rule=TriggerRule.ALL_SUCCESS)
-    def generate_success_message():
-        return "✅ Karieragr report ready - check ~/Documents/Bind-Mounts/karieragr/daily-urls/"
-
-    @task(trigger_rule=TriggerRule.ALL_FAILED)
-    def generate_failure_message():
-        return "❌ Karieragr scraping failed."
-
-    @task(trigger_rule=TriggerRule.ONE_SUCCESS)
-    def join(s: str):
-        return s
-
     notify = DiscordWebhookOperator(
         task_id="notify_discord",
         message="{{ ti.xcom_pull(task_ids='join') }}",
@@ -72,3 +86,4 @@ with DAG(
         >> join([success_string, failure_string])
         >> notify
     )
+    list(dag.tasks) >> watcher()
