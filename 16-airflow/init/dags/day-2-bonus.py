@@ -1,5 +1,4 @@
 from datetime import datetime
-from airflow import DAG
 from airflow.decorators import task
 from docker.types import Mount
 from airflow import DAG
@@ -10,7 +9,6 @@ from airflow.providers.discord.operators.discord_webhook import (
 )
 from airflow.utils.trigger_rule import TriggerRule
 from airflow.exceptions import AirflowException
-from airflow.providers.discord.hooks import discord_webhook
 
 
 @task.branch
@@ -52,7 +50,8 @@ with DAG(
     tags=["bblue"],
 ) as dag:
 
-    scraper = DockerOperator(
+    # --- DockerOperator Task
+    scraper_task = DockerOperator(
         task_id="scraper",
         image="karieragrscraper:latest",
         auto_remove="force",  # correct in Airflow 3.0+,
@@ -70,20 +69,28 @@ with DAG(
         environment={"POSTGRES_HOST": "my-postgres"},
     )
 
-    notify = DiscordWebhookOperator(
+    discord_notify_task = DiscordWebhookOperator(
         task_id="notify_discord",
         message="{{ ti.xcom_pull(task_ids='join') }}",
         http_conn_id="discord_conn_id",
     )
 
-    success_string = generate_success_message()
-    failure_string = generate_failure_message()
+    generate_success_message_task = generate_success_message()
+    generate_failure_message_task = generate_failure_message()
 
     (
-        scraper
-        >> branch_choose_message_task(scraper)
-        >> [success_string, failure_string]
-        >> join([success_string, failure_string])
-        >> notify
+        scraper_task
+        >> branch_choose_message_task(scraper_task)
+        >> [
+            generate_success_message_task,
+            generate_failure_message_task,
+        ]
+        >> join(
+            [
+                generate_success_message_task,
+                generate_failure_message_task,
+            ]
+        )
+        >> discord_notify_task
     )
     list(dag.tasks) >> watcher()

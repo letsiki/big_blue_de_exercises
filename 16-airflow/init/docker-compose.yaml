@@ -63,7 +63,7 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     AIRFLOW_CONN_MY_POSTGRES_CONN: ${AIRFLOW_CONN_MY_POSTGRES_CONN}
-    # AIRFLOW_CONN_DISCORD_CONN_ID: ${AIRFLOW_CONN_DISCORD_CONN_ID}
+    # AIRFLOW_CONN_DISCORD_CONN_ID_ENV: ${AIRFLOW_CONN_DISCORD_CONN_ID_ENV}
     AIRFLOW__API_AUTH__JWT_SECRET: 9ce2cbd5115906a0c3bdb41b79a8c4bff489d7bb6347211932b298bfebd88087
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
@@ -175,6 +175,7 @@ services:
       - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
       - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
       - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+      - ${AIRFLOW_PROJ_DIR:-.}/include:/opt/airflow/include
       - /var/run/docker.sock:/var/run/docker.sock
     group_add:
       - ${DOCKER_GID}
